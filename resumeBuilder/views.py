@@ -3,6 +3,7 @@ import openai
 from rest_framework.decorators import api_view
 from django.http import JsonResponse
 
+
 def gpt3(stext):
     openai.api_key = "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"
     response = openai.Completion.create(
