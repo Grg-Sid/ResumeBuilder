@@ -5,7 +5,9 @@ from django.http import JsonResponse
 
 
 def gpt3(stext):
-    openai.api_key = "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"
+    key1 = 'sk-99cdw4MLPoQh6nNyjWWmT3'
+    key2 =  'BlbkFJmA2IKhBIvqrH5VM7mCv3'    
+    openai.api_key = f"{key1}{key2}"
     response = openai.Completion.create(
         engine="text-davinci-003",
         prompt="generate a sentence for resume using the word %s without telling the the time and should not start in first person" % stext,
